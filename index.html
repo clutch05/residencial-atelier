@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<!--
+  DEMO · Residencial Atelier, de Grupo M2 · Landing para captar leads de lotes (Apogeo, 21-oct-2026)
+  Real (de sus videos promocionales y su manual de marca 2026): el nombre, que es de Grupo M2, que está en Orizaba,
+  que tiene lotes disponibles, «entorno residencial consolidado», «alta proyección de plusvalía»,
+  «tranquilidad, seguridad y conectividad», «agenda tu visita privada», el WhatsApp 272 705 1319,
+  GrupoM2@gmail.com, «más de 14 años», el eslogan y los colores, logo y tipografías del manual.
+  De ejemplo (marcado en la página): plano, número y medidas de lotes, disponibilidad, precios, plazos y tiempos de traslado.
+  Fotos: casas construidas por Grupo M2 (no son de Atelier). PERSONALIZAR: cuando lleguen fotos de Atelier, van en el hero y en Ubicación.
+  Mármol: escaneo CC0 de ambientCG (Marble017).
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f1418">
+<title>Residencial Atelier · Lotes en Orizaba de Grupo M2</title>
+<meta name="description" content="Lotes en un entorno residencial consolidado de Orizaba, con alta proyección de plusvalía. Un desarrollo de Grupo M2.">
+<meta property="og:title" content="Residencial Atelier · Grupo M2">
+<meta property="og:description" content="Una de las mejores ubicaciones de Orizaba para construir tu hogar. Agenda tu visita privada.">
+<meta property="og:image" content="https://clutch05.github.io/residencial-atelier/img/real-12.jpg">
+<meta property="og:url" content="https://clutch05.github.io/residencial-atelier/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Orbitron:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/real-12.jpg" media="(min-width: 641px)">
+<link rel="preload" as="image" href="img/real-13.jpg" media="(max-width: 640px)">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  /* ===== Manual de marca Grupo M2 2026 (#1E272E, #4F7B9F, #6E7881, #A8B7C4, #F7F7F9) ===== */
+  :root{
+    --bg:#0f1418;            /* #1E272E del manual llevado casi a negro */
+    --bg-2:#1E272E;          /* azul marino del manual: paneles */
+    --ink:#F7F7F9;
+    --ink-2:#cdd6de;
+    --muted:#A8B7C4;
+    --line:rgba(168,183,196,.16);
+    --line-2:rgba(168,183,196,.36);
+    --acento:#4F7B9F;
+    --acento-txt:#8db3d3;
+    --acento-bg:rgba(79,123,159,.28);
+    --wa:#25d366;
+    --r:2px;
+    --wrap:1320px;
+    --g:clamp(20px,4vw,56px);
+    --hdr:72px;
+    --body:"Poppins",system-ui,sans-serif;
+    --marca:"Orbitron","Poppins",system-ui,sans-serif;
+    --atelier:"Cinzel",Georgia,serif;   /* el letrero de Residencial Atelier */
+    --ease:cubic-bezier(.16,1,.3,1);
+    --marmol:url(img/marmol.jpg);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:var(--hdr);color-scheme:dark;-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img,video,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button,input{font:inherit;color:inherit}
+  button{background:none;border:0;cursor:pointer}
+  :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+  h1,h2,h3{font-family:var(--body);font-weight:300;letter-spacing:-.022em;line-height:1.08;text-wrap:balance}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--g)}
+  .sec{padding:clamp(56px,6.5vw,92px) 0}
+  .ic{width:20px;height:20px;flex:none;fill:currentColor}
+  .skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--ink);color:var(--bg);padding:8px 14px}
+  .skip:focus{left:8px}
+  .label{font-family:var(--marca);font-weight:600;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--acento-txt)}
+  .h2{font-size:clamp(2.1rem,4.4vw,3.6rem);max-width:20ch}
+  .label + .h2{margin-top:18px}
+  .lead{color:var(--ink-2);font-size:1.06rem;max-width:54ch;margin-top:18px}
+  .ej{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.84rem;color:var(--muted)}
+  .ej::before{content:"";width:18px;height:1px;background:var(--acento);flex:none}
+  .money{font-variant-numeric:tabular-nums}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;height:52px;padding:0 1.6rem;border-radius:var(--r);
+       font-family:var(--marca);font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
+       transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .15s}
+  .btn:active{transform:translateY(1px)}
+  .btn .ic{width:18px;height:18px}
+  .btn-solid{background:var(--ink);color:var(--bg)}
+  .btn-solid:hover{background:#fff}
+  .btn-line{border:1px solid var(--line-2);color:var(--ink)}
+  .btn-line:hover{border-color:var(--ink)}
+  .link{display:inline-flex;align-items:center;gap:.6rem;padding-bottom:6px;border-bottom:1px solid var(--line-2);
+        font-family:var(--marca);font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;transition:border-color .3s}
+  .link:hover{border-color:var(--ink)}
+  .link .ic{width:16px;height:16px;transition:transform .4s var(--ease)}
+  .link:hover .ic{transform:translateX(4px)}
+
+  /* Logotipo del residencial (como el letrero) */
+  .atelier{display:inline-flex;flex-direction:column;align-items:center;line-height:1;font-family:var(--atelier)}
+  .atelier small{font-size:.56rem;font-weight:600;letter-spacing:.5em;margin-right:-.5em;color:var(--ink-2)}
+  .atelier b{font-size:1.45rem;font-weight:500;letter-spacing:.12em;margin-right:-.12em;margin-top:5px}
+
+  /* ===== Header ===== */
+  .hdr{position:fixed;inset:0 0 auto;z-index:50;height:var(--hdr);border-bottom:1px solid transparent;transition:background .4s var(--ease),border-color .4s}
+  .hdr.solid{background:rgba(15,20,24,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
+  .hdr-in{height:100%;display:flex;align-items:center;gap:32px}
+  .nav{display:flex;gap:26px;margin-left:10px}
+  .nav a{font-size:.92rem;color:var(--ink-2);transition:color .2s}
+  .nav a:hover{color:var(--ink)}
+  .hdr-sp{flex:1}
+  .hdr-wa{display:flex;align-items:center;gap:8px;font-size:.92rem;color:var(--ink-2)}
+  .hdr-wa:hover{color:var(--ink)}
+  .hdr .btn{height:42px;padding:0 1.15rem;font-size:.68rem}
+
+  /* ===== Hero: casa real de Grupo M2 ===== */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+  .hero-media{position:absolute;inset:0;z-index:-2;display:block}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;scale:1.07;animation:kb 16s var(--ease) forwards}
+  @keyframes kb{to{scale:1}}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+    linear-gradient(180deg,rgba(15,20,24,.66) 0%,rgba(15,20,24,0) 24%,rgba(15,20,24,0) 40%,rgba(15,20,24,.9) 82%,var(--bg) 100%),
+    linear-gradient(90deg,rgba(15,20,24,.66) 0%,rgba(15,20,24,0) 64%)}
+  .hero-in{width:100%;padding-top:calc(var(--hdr) + 48px);padding-bottom:clamp(40px,7vh,88px)}
+  .hero h1{font-size:clamp(2.6rem,6vw,5.4rem);letter-spacing:-.035em;line-height:1;margin-top:18px}
+  .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+  .hero h1 .ln > span{display:block;transform:translateY(106%);animation:up 1.1s var(--ease) .15s forwards}
+  .hero h1 .ln:nth-child(2) > span{animation-delay:.27s}
+  @keyframes up{to{transform:none}}
+  .hero-sub{max-width:46ch;color:var(--ink-2);font-size:1.08rem;margin-top:22px}
+  .hero-cta{display:flex;align-items:center;gap:20px 30px;flex-wrap:wrap;margin-top:32px}
+  .hero-cap{position:absolute;right:var(--g);bottom:32px;display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted)}
+  .hero-cap::before{content:"";width:22px;height:1px;background:var(--muted)}
+
+  /* ===== Datos reales ===== */
+  .datos{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .datos-in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .dato{padding:26px 24px 26px 0}
+  .dato + .dato{padding-left:24px;border-left:1px solid var(--line)}
+  .dato b{display:block;font-weight:300;font-size:clamp(1.45rem,2.5vw,2.1rem);letter-spacing:-.02em;line-height:1.15}
+  .dato > span{font-size:.88rem;color:var(--muted)}
+
+  /* ===== Por qué Atelier: sus palabras y su video ===== */
+  .porque{position:relative;background:linear-gradient(180deg,var(--bg) 0%,rgba(15,20,24,.84) 24%,rgba(15,20,24,.9) 100%),var(--marmol) center/880px}
+  .porque-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(36px,6vw,104px);align-items:center}
+  .claims{list-style:none;margin-top:40px;border-top:1px solid var(--line)}
+  .claims li{display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);font-size:1.06rem}
+  .claims li::before{content:"";width:16px;height:1px;background:var(--acento);flex:none;transform:translateY(-5px)}
+  .vcard{position:relative;aspect-ratio:9/16;width:100%;max-width:380px;margin-left:auto;overflow:hidden;background:var(--bg-2);border:1px solid var(--line)}
+  .vcard video{width:100%;height:100%;object-fit:cover}
+  .play{position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:12px;padding:8px 18px 8px 8px;border-radius:999px;
+        background:rgba(15,20,24,.74);border:1px solid var(--line-2);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+        font-family:var(--marca);font-weight:600;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);transition:background .3s}
+  .play:hover{background:rgba(79,123,159,.88)}
+  .play i{position:relative;width:40px;height:40px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+  .play i::before{content:"";margin-left:3px;border-style:solid;border-width:7px 0 7px 11px;border-color:transparent transparent transparent var(--bg)}
+  .play i::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--ink);opacity:0;animation:aro 2.4s var(--ease) 3}
+  @keyframes aro{0%{transform:scale(.8);opacity:.7}100%{transform:scale(1.35);opacity:0}}
+
+  /* Franjas diagonales del manual */
+  .franjas{position:absolute;top:0;right:0;width:clamp(200px,30vw,420px);height:clamp(40px,5vw,70px);overflow:hidden;pointer-events:none}
+  .franjas i{position:absolute;top:0;height:100%;transform:skewX(-40deg);transform-origin:0 0}
+  .franjas i:nth-child(1){right:-60px;width:62%;background:var(--acento)}
+  .franjas i:nth-child(2){right:58%;width:9%;background:var(--acento)}
+  .franjas i:nth-child(3){right:74%;width:4%;background:var(--muted);opacity:.75}
+
+  /* ===== Plano de lotes ===== */
+  .plan-grid{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,3.3fr);gap:clamp(20px,2.6vw,36px);margin-top:40px;align-items:start}
+  .plan{position:relative;background:linear-gradient(rgba(15,20,24,.6),rgba(15,20,24,.74)),var(--marmol) center/760px;border:1px solid var(--line);padding:clamp(10px,1.8vw,22px)}
+  .plan-scroll{overflow-x:auto;scrollbar-width:thin}
+  .plan svg{width:100%;height:auto}
+  .lot{stroke-width:1.2;transition:fill .25s,stroke .25s,opacity .35s}
+  .lot.d{fill:var(--acento-bg);stroke:var(--acento-txt);cursor:pointer}
+  .lot.d:hover{fill:rgba(79,123,159,.55)}
+  .lot.a{fill:url(#rayas);stroke:rgba(247,247,249,.5);cursor:pointer}
+  .lot.v{fill:rgba(247,247,249,.05);stroke:rgba(247,247,249,.16);cursor:pointer}
+  .lot.sel{fill:var(--ink);stroke:var(--ink)}
+  .lot:focus{outline:none}
+  .lot:focus-visible{stroke:var(--ink);stroke-width:3}
+  .plan.solo .lot:not(.d){opacity:.18}
+  .plan-hint{display:none;margin-top:10px;font-size:.82rem;color:var(--muted)}
+  .plan-info{border:1px solid var(--line);background:var(--bg-2);padding:clamp(20px,2.2vw,28px);position:sticky;top:calc(var(--hdr) + 24px)}
+  .pi-big{font-weight:300;font-size:4rem;line-height:1;letter-spacing:-.03em}
+  .pi-big small{font-size:1.2rem;color:var(--muted);letter-spacing:0}
+  .pi-t{margin-top:8px;color:var(--ink-2)}
+  .pi-hint{margin-top:16px;font-size:.9rem;color:var(--muted)}
+  .pi-id{font-weight:300;font-size:2.4rem;line-height:1;letter-spacing:-.02em}
+  .pi-dl{margin:18px 0 22px;border-top:1px solid var(--line)}
+  .pi-dl div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .pi-dl dt{color:var(--muted)}
+  .pi-dl dd{color:var(--ink);text-align:right}
+  .pi-dl dd.st-d{color:var(--acento-txt)}
+  .plan-info .btn{width:100%}
+  .legend{list-style:none;display:grid;gap:8px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:.9rem;color:var(--ink-2)}
+  .legend li{display:flex;align-items:center;gap:10px}
+  .legend b{margin-left:auto;font-weight:500;color:var(--ink)}
+  .sw{width:14px;height:14px;border:1px solid;flex:none}
+  .sw.d{background:var(--acento-bg);border-color:var(--acento-txt)}
+  .sw.a{background:repeating-linear-gradient(45deg,rgba(247,247,249,.4) 0 1.5px,transparent 1.5px 5px);border-color:rgba(247,247,249,.5)}
+  .sw.v{background:rgba(247,247,249,.05);border-color:rgba(247,247,249,.2)}
+  .switch{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:.92rem;color:var(--ink-2);cursor:pointer;width:max-content}
+  .switch input{appearance:none;-webkit-appearance:none;width:38px;height:22px;border:1px solid var(--line-2);border-radius:11px;position:relative;cursor:pointer;transition:background .25s,border-color .25s;flex:none}
+  .switch input::after{content:"";position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:var(--ink-2);transition:transform .25s var(--ease),background .25s}
+  .switch input:checked{background:var(--acento-bg);border-color:var(--acento-txt)}
+  .switch input:checked::after{transform:translateX(16px);background:var(--acento-txt)}
+
+  /* ===== Plan de pagos ===== */
+  .calc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,64px);margin-top:40px;align-items:start}
+  .calc-in{display:grid;gap:30px}
+  .calc fieldset{border:0;min-width:0}
+  .calc legend,.rango label{display:flex;justify-content:space-between;width:100%;font-size:1.02rem;margin-bottom:12px}
+  .rango output{font-variant-numeric:tabular-nums;color:var(--acento-txt)}
+  .seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line-2);border-radius:var(--r)}
+  .seg label{position:relative}
+  .seg label + label{border-left:1px solid var(--line-2)}
+  .seg input{position:absolute;inset:0;opacity:0;cursor:pointer;margin:0}
+  .seg span{display:flex;align-items:center;justify-content:center;min-height:48px;font-size:.95rem;color:var(--ink-2);transition:background .2s,color .2s}
+  .seg input:checked + span{background:rgba(247,247,249,.1);color:var(--ink);box-shadow:inset 0 -2px 0 var(--acento)}
+  .seg input:focus-visible + span{outline:2px solid var(--ink);outline-offset:-2px}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;cursor:pointer}
+  input[type=range]::-webkit-slider-runnable-track{height:2px;background:linear-gradient(90deg,var(--acento) var(--p,50%),var(--line-2) var(--p,50%))}
+  input[type=range]::-moz-range-track{height:2px;background:var(--line-2)}
+  input[type=range]::-moz-range-progress{height:2px;background:var(--acento)}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--ink);margin-top:-9px;border:0}
+  input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--ink);border:0}
+  .rango small{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);margin-top:4px}
+  .calc-out{background:var(--bg-2);border:1px solid var(--line);padding:clamp(22px,3vw,40px)}
+  .c-precio{font-size:.92rem;color:var(--muted)}
+  .c-precio b{color:var(--ink);font-weight:500}
+  .barra{display:flex;height:10px;margin:22px 0 6px;gap:3px}
+  .barra i{display:block;height:100%;transition:flex-grow .5s var(--ease)}
+  .barra .b1{background:var(--ink)}
+  .barra .b2{background:var(--acento)}
+  .c-dl{display:grid;margin-top:18px}
+  .c-dl div{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .c-dl i{width:10px;height:10px;display:block}
+  .c-dl dt{color:var(--ink-2);font-size:.95rem}
+  .c-dl dd{font-size:1.35rem;font-weight:400;font-variant-numeric:tabular-nums}
+  .c-dl .mes dd{font-size:1.9rem}
+  .calc-out .ej{margin:16px 0 24px}
+
+  /* ===== Ubicación ===== */
+  .ubi{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,6vw,96px);align-items:center}
+  .dist{margin-top:34px;border-top:1px solid var(--line);max-width:460px}
+  .dist div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .dist dt{color:var(--ink-2)}
+  .dist dd{color:var(--ink)}
+  .ubi-foto{margin:0}
+  .ubi-foto .ph{aspect-ratio:5/4;overflow:hidden;background:var(--bg-2)}
+  .ubi-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+  .ubi-foto figcaption{margin-top:12px;font-size:.84rem;color:var(--muted)}
+
+  /* ===== Construye con Grupo M2 ===== */
+  .m2-logo{height:34px;width:auto;margin-bottom:22px}
+  .bento{display:grid;grid-template-columns:5fr 4fr 3fr;grid-template-rows:repeat(2,minmax(0,330px));gap:clamp(12px,1.6vw,22px);margin-top:44px}
+  .b{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:12px;min-height:0}
+  .b-1{grid-row:span 2}
+  .b button{display:block;width:100%;height:100%;min-height:0;overflow:hidden;cursor:zoom-in;background:var(--bg-2)}
+  .b img{width:100%;height:100%;object-fit:cover;transition:scale 1.4s var(--ease)}
+  .b button:hover img{scale:1.05}
+  .b figcaption{font-size:.88rem;color:var(--muted)}
+  .b figcaption b{display:block;font-weight:500;font-size:1.02rem;color:var(--ink)}
+  .cons-cta{display:flex;gap:18px 32px;flex-wrap:wrap;margin-top:30px}
+
+  /* ===== Cierre sobre mármol ===== */
+  .cierre{position:relative;background:linear-gradient(180deg,rgba(15,20,24,.92),rgba(15,20,24,.7) 50%,rgba(15,20,24,.92)),var(--marmol) center/880px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cierre-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end}
+  .cierre .lead{max-width:46ch}
+  .cierre-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+
+  /* ===== Preguntas ===== */
+  .faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,5vw,88px);align-items:start}
+  .faq-grid .h2{position:sticky;top:calc(var(--hdr) + 28px)}
+  details{border-bottom:1px solid var(--line)}
+  details:first-child{border-top:1px solid var(--line)}
+  summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-size:1.08rem;font-weight:400}
+  summary::-webkit-details-marker{display:none}
+  .pm{position:relative;width:16px;height:16px;flex:none}
+  .pm::before,.pm::after{content:"";position:absolute;left:0;top:50%;width:16px;height:1px;background:var(--ink-2);transition:transform .35s var(--ease)}
+  .pm::after{transform:rotate(90deg)}
+  details[open] .pm::after{transform:none}
+  details p{color:var(--ink-2);padding:0 0 24px;max-width:62ch}
+
+  /* ===== Footer ===== */
+  .foot{padding:60px 0 calc(32px + env(safe-area-inset-bottom))}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  .foot .atelier{align-items:flex-start}
+  .foot .atelier small{margin-right:0}
+  .por{display:flex;align-items:center;gap:12px;margin-top:22px;font-size:.84rem;color:var(--muted)}
+  .por img{height:26px;width:auto}
+  .eslogan{margin-top:14px;font-size:.92rem;color:var(--ink-2)}
+  .foot h2{font-family:var(--marca);font-weight:600;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2);margin-bottom:16px;line-height:1.4}
+  .foot ul{list-style:none;display:grid;gap:9px}
+  .foot ul a,.foot ul button{color:var(--ink-2);font-size:.95rem;transition:color .2s;text-align:left}
+  .foot ul a:hover,.foot ul button:hover{color:var(--ink)}
+  .legal{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+
+  .barra-cta{display:none}
+
+  /* ===== Formulario de lead (hoja lateral) ===== */
+  .sheet{position:fixed;inset:0 0 0 auto;width:min(460px,100%);height:100%;max-width:none;max-height:none;margin:0 0 0 auto;padding:0;border:0;border-left:1px solid var(--line);
+         background:linear-gradient(rgba(15,20,24,.95),rgba(15,20,24,.97)),var(--marmol) center/700px;color:var(--ink)}
+  .sheet[open]{display:flex;flex-direction:column;animation:entra .45s var(--ease)}
+  @keyframes entra{from{transform:translateX(40px);opacity:0}}
+  .sheet::backdrop{background:rgba(0,0,0,.6);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+  .sh-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:24px 26px 0}
+  .sh-top h2{font-size:1.75rem;max-width:14ch}
+  .sh-x{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:var(--r);flex:none}
+  .sh-body{flex:1;overflow-y:auto;padding:18px 26px 28px}
+  .chip{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:7px 12px;border:1px solid var(--acento-txt);border-radius:var(--r);font-size:.85rem;color:var(--ink);background:var(--acento-bg)}
+  .chip[hidden]{display:none}
+  .pasos-bar{display:flex;gap:6px;margin-bottom:24px}
+  .pasos-bar i{flex:1;height:2px;background:var(--line-2);transition:background .3s}
+  .pasos-bar i.on{background:var(--acento-txt)}
+  .paso-f{border:0;min-width:0}
+  .paso-f[hidden]{display:none}
+  .paso-f legend{font-size:1.2rem;margin-bottom:16px}
+  .opts{display:grid;gap:8px}
+  .opts label{position:relative;display:block}
+  .opts input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+  .opts span{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 18px;border:1px solid var(--line-2);border-radius:var(--r);color:var(--ink-2);transition:border-color .2s,color .2s,background .2s}
+  .opts span::after{content:"";width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg);opacity:.6}
+  .opts label:hover span{border-color:var(--ink-2);color:var(--ink)}
+  .opts input:checked + span{border-color:var(--acento-txt);color:var(--ink);background:var(--acento-bg)}
+  .opts input:focus-visible + span{outline:2px solid var(--ink);outline-offset:2px}
+  .campo{display:grid;gap:8px;margin-bottom:16px}
+  .campo label{font-size:.9rem;color:var(--ink-2)}
+  .campo input{height:52px;padding:0 16px;background:rgba(247,247,249,.04);border:1px solid var(--line-2);border-radius:var(--r);font-size:1rem;color:var(--ink)}
+  .campo input::placeholder{color:#7f8a94}
+  .campo input:focus{outline:none;border-color:var(--ink)}
+  .campo input[aria-invalid="true"]{border-color:#e07a6e}
+  .tel{display:flex}
+  .tel span{display:grid;place-items:center;padding:0 14px;border:1px solid var(--line-2);border-right:0;border-radius:var(--r) 0 0 var(--r);color:var(--muted);font-size:.95rem}
+  .tel input{flex:1;min-width:0;border-radius:0 var(--r) var(--r) 0}
+  .err{font-size:.84rem;color:#ec8b80;min-height:1.2em}
+  .acepto{display:flex;gap:12px;align-items:flex-start;font-size:.88rem;color:var(--ink-2);margin:6px 0 4px;cursor:pointer}
+  .acepto input{width:20px;height:20px;margin-top:2px;accent-color:var(--acento);flex:none}
+  .acepto a{border-bottom:1px solid var(--line-2)}
+  .sh-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:22px}
+  .atras{font-size:.9rem;color:var(--muted)}
+  .atras:hover{color:var(--ink)}
+  .sh-body .btn-solid{flex:1}
+  .gracias[hidden]{display:none}
+  .gracias h3{font-size:2rem;margin-bottom:12px}
+  .gracias p{color:var(--ink-2);margin-bottom:24px}
+  .gracias .btn{width:100%;margin-bottom:10px}
+  .btn-wa{background:var(--wa);color:#063d1f}
+  .btn-wa:hover{background:#2ee070}
+
+  /* ===== Video y galería ===== */
+  .vd,.lb{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#0b0f12;color:var(--ink)}
+  .vd[open]{display:grid;place-items:center}
+  .vd::backdrop,.lb::backdrop{background:#000}
+  .vd video{height:min(86dvh,960px);aspect-ratio:9/16;max-width:94vw;background:#000}
+  .vd .lb-x{position:absolute;top:14px;right:14px}
+  .lb[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto}
+  .lb-top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:14px var(--g)}
+  .lb-t{font-size:1.02rem}
+  .lb-x{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:var(--r)}
+  .lb-stage{position:relative;display:grid;place-items:center;min-height:0;padding:0 var(--g)}
+  .lb-stage img{max-width:100%;max-height:calc(100dvh - 150px);object-fit:contain;user-select:none;-webkit-user-drag:none;touch-action:pan-y}
+  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;display:grid;place-items:center;background:rgba(15,20,24,.6);border:1px solid var(--line-2);border-radius:var(--r)}
+  .lb-prev{left:12px}
+  .lb-next{right:12px}
+  .lb-bar{display:flex;justify-content:center;gap:6px;padding:20px var(--g) 26px}
+  .lb-bar i{width:26px;height:2px;background:var(--line-2);transition:background .3s}
+  .lb-bar i.on{background:var(--ink)}
+
+  .js .rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+
+  /* ===== Tablet y celular ===== */
+  @media (max-width:1100px){
+    .nav,.hdr-wa{display:none}
+  }
+  @media (max-width:899px){
+    .datos-in{grid-template-columns:1fr 1fr}
+    .dato:nth-child(3){padding-left:0;border-left:0}
+    .dato:nth-child(n+3){border-top:1px solid var(--line)}
+    .porque-grid,.plan-grid,.calc,.ubi,.cierre-in,.faq-grid{grid-template-columns:minmax(0,1fr)}
+    .vcard{margin:0 auto 0 0;max-width:340px}
+    .plan svg{min-width:660px}
+    .plan-hint{display:block}
+    .plan-info{position:static}
+    .bento{grid-template-columns:1fr 1fr;grid-template-rows:none}
+    .b-1{grid-column:span 2;grid-row:auto}
+    .b{grid-template-rows:auto auto;align-content:start}
+    .b button{height:auto;aspect-ratio:4/5}
+    .b-1 button{aspect-ratio:4/3}
+    .cierre-cta{justify-content:flex-start}
+    .faq-grid .h2{position:static}
+    .barra-cta{display:grid;grid-template-columns:1fr auto;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+               background:rgba(15,20,24,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .45s var(--ease)}
+    .barra-cta.show{transform:none}
+    .barra-cta .btn{height:48px}
+    .barra-cta .wa{width:48px;padding:0}
+    .foot{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  }
+  @media (max-width:640px){
+    :root{--hdr:64px}
+    body{font-size:16px}
+    .hdr-in{gap:16px}
+    .atelier b{font-size:1.25rem}
+    .hdr .btn{height:40px;padding:0 .9rem;font-size:.64rem;letter-spacing:.08em}
+    .hero-cta .btn{width:100%}
+    .hero-cap{position:static;margin-top:22px}
+    .dato{padding:20px 14px 20px 0}
+    .dato + .dato{padding-left:14px}
+    .dato:nth-child(3){padding-left:0}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .foot-grid > div:first-child{grid-column:span 2}
+    .sheet{inset:auto 0 0 0;width:100%;height:auto;max-height:92dvh;border-left:0;border-top:1px solid var(--line)}
+    .sheet[open]{animation-name:sube}
+    @keyframes sube{from{transform:translateY(40px);opacity:0}}
+    .lb-nav{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .hero-media img{animation:none;scale:1}
+    .hero h1 .ln > span{animation:none;transform:none}
+    .js .rv{opacity:1;transform:none;transition:none}
+    .sheet[open]{animation:none}
+    *,*::before,*::after{transition-duration:.01ms!important;animation-iteration-count:1!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- Íconos (Phosphor, regular) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 256 256"><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.86,15.86,0,0,0,72.12,230a16,16,0,0,0,16.2-.3L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></symbol>
+  <symbol id="i-next" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="atelier" href="#top" aria-label="Residencial Atelier, inicio"><small>RESIDENCIAL</small><b>ATELIER</b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#atelier">Atelier</a>
+      <a href="#lotes">Lotes</a>
+      <a href="#pagos">Pagos</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#construye">Construye</a>
+    </nav>
+    <span class="hdr-sp"></span>
+    <a class="hdr-wa js-wa" href="#" data-wa="general" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    <button class="btn btn-line" data-lead="general">Recibir precios</button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO. PERSONALIZAR: cuando lleguen fotos de Atelier, van aquí -->
+<section class="hero" id="top">
+  <picture class="hero-media">
+    <source media="(max-width: 640px)" srcset="img/real-13.jpg" width="960" height="1280">
+    <img src="img/real-12.jpg" width="1280" height="960" fetchpriority="high"
+         alt="Casa residencial construida por Grupo M2: fachada con mármol oscuro, columna de piedra, madera y balcones de vidrio">
+  </picture>
+  <div class="wrap hero-in">
+    <p class="label">Lotes disponibles en Orizaba</p>
+    <h1><span class="ln"><span>Una de las mejores</span></span><span class="ln"><span>ubicaciones de Orizaba.</span></span></h1>
+    <p class="hero-sub">Lotes en un entorno residencial consolidado, con alta proyección de plusvalía.</p>
+    <div class="hero-cta">
+      <button class="btn btn-solid" data-lead="general">Recibir precios</button>
+      <button class="link" data-video="img/atelier-1.mp4" data-poster="img/atelier-1.jpg">Ver video<svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></button>
+    </div>
+    <p class="hero-cap">Casa construida por Grupo M2</p>
+  </div>
+  <div id="sentinel" aria-hidden="true" style="position:absolute;inset:0 0 18% 0;pointer-events:none"></div>
+</section>
+
+<!-- DATOS (todos salen de sus videos) -->
+<section class="datos" aria-label="Datos del residencial">
+  <div class="wrap datos-in">
+    <div class="dato"><b>Orizaba</b><span>zona residencial estratégica</span></div>
+    <div class="dato"><b>Plusvalía</b><span>con alta proyección</span></div>
+    <div class="dato"><b>Seguridad</b><span>tranquilidad y conectividad</span></div>
+    <div class="dato"><b>Más de 14 años</b><span>de experiencia de Grupo M2</span></div>
+  </div>
+</section>
+
+<!-- POR QUÉ ATELIER: sus palabras y su video -->
+<section class="porque sec" id="atelier">
+  <div class="franjas" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap porque-grid">
+    <div>
+      <h2 class="h2 rv">Aquí no solo eliges un terreno.</h2>
+      <p class="lead rv">Eliges dónde crecerá tu patrimonio, en un entorno residencial consolidado de Orizaba.</p>
+      <ul class="claims">
+        <li class="rv">Alta proyección de plusvalía</li>
+        <li class="rv">Equilibrio entre tranquilidad y conectividad</li>
+        <li class="rv">Tranquilidad, seguridad y crecimiento patrimonial</li>
+        <li class="rv">Visita privada para conocer tu lote</li>
+      </ul>
+    </div>
+    <div class="vcard rv">
+      <video muted loop playsinline preload="none" poster="img/atelier-2.jpg" data-src="img/atelier-2.mp4" aria-hidden="true" tabindex="-1"></video>
+      <button class="play" data-video="img/atelier-2.mp4" data-poster="img/atelier-2.jpg"><i aria-hidden="true"></i>Ver con sonido</button>
+    </div>
+  </div>
+</section>
+
+<!-- PLANO DE LOTES (de ejemplo) -->
+<section class="sec" id="lotes">
+  <div class="wrap">
+    <h2 class="h2 rv">Elige tu lote.</h2>
+    <p class="lead rv">Toca un lote del plano para ver su superficie, precio y disponibilidad.</p>
+    <p class="ej rv">Plano, medidas, precios y disponibilidad de ejemplo.</p>
+    <div class="plan-grid">
+      <div class="plan rv" id="plan">
+        <div class="plan-scroll" id="planScroll">
+          <!-- PERSONALIZAR: plano real. Los lotes se dibujan desde LOTES en el script -->
+          <svg viewBox="0 0 1000 580" role="group" aria-label="Plano de ejemplo de Residencial Atelier">
+            <defs>
+              <pattern id="rayas" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="6" height="6" fill="rgba(247,247,249,.06)"/>
+                <line x1="0" y1="0" x2="0" y2="6" stroke="rgba(247,247,249,.42)" stroke-width="1.6"/>
+              </pattern>
+            </defs>
+            <!-- límite del residencial -->
+            <rect x="30" y="40" width="940" height="500" rx="4" fill="rgba(247,247,249,.05)" stroke="rgba(168,183,196,.32)"/>
+            <!-- árboles del perímetro -->
+            <g fill="rgba(122,156,120,.5)">
+              <circle cx="900" cy="80" r="9"/><circle cx="930" cy="112" r="11"/><circle cx="905" cy="150" r="8"/><circle cx="938" cy="190" r="10"/><circle cx="910" cy="226" r="9"/>
+              <circle cx="905" cy="356" r="10"/><circle cx="936" cy="392" r="9"/><circle cx="902" cy="430" r="11"/><circle cx="934" cy="470" r="8"/><circle cx="905" cy="500" r="9"/>
+            </g>
+            <!-- calle principal de adoquín y retorno -->
+            <rect x="150" y="262" width="726" height="56" fill="rgba(247,247,249,.08)"/>
+            <circle cx="900" cy="290" r="44" fill="rgba(247,247,249,.08)"/>
+            <circle cx="900" cy="290" r="16" fill="rgba(122,156,120,.45)"/>
+            <line x1="160" y1="290" x2="852" y2="290" stroke="rgba(247,247,249,.18)" stroke-dasharray="10 12"/>
+            <!-- acceso con caseta -->
+            <rect x="40" y="250" width="110" height="80" fill="rgba(247,247,249,.08)"/>
+            <rect x="58" y="208" width="44" height="34" fill="rgba(247,247,249,.12)" stroke="rgba(247,247,249,.45)"/>
+            <rect x="146" y="252" width="6" height="76" fill="#F7F7F9"/>
+            <g font-family="Orbitron, system-ui, sans-serif" font-size="10.5" letter-spacing="1.6" fill="#cdd6de" text-anchor="middle">
+              <text x="520" y="60">MANZANA A</text>
+              <text x="520" y="530">MANZANA B</text>
+              <text x="95" y="350" fill="#F7F7F9">ACCESO</text>
+            </g>
+            <g transform="translate(950 520)" fill="#cdd6de" font-family="Orbitron, system-ui, sans-serif" font-size="9">
+              <path d="M0 -14 L5 0 L0 -3 L-5 0 Z"/><text x="0" y="12" text-anchor="middle">N</text>
+            </g>
+            <g id="lotesG"></g>
+          </svg>
+        </div>
+        <p class="plan-hint">Desliza para ver todo el plano.</p>
+      </div>
+      <aside class="plan-info rv" id="planInfo" aria-live="polite">
+        <div id="piDefault">
+          <p class="pi-big"><span class="js-disp">0</span><small> de <span class="js-tot">0</span></small></p>
+          <p class="pi-t">lotes disponibles</p>
+          <p class="pi-hint">Toca un lote del plano para ver su superficie y precio.</p>
+        </div>
+        <div id="piLote" hidden>
+          <p class="pi-id" id="piId">Lote A-01</p>
+          <dl class="pi-dl">
+            <div><dt>Manzana</dt><dd id="piMz">A</dd></div>
+            <div><dt>Superficie</dt><dd id="piM2">0 m²</dd></div>
+            <div><dt>Estado</dt><dd id="piSt">Disponible</dd></div>
+            <div><dt>Precio de lista</dt><dd class="money" id="piPr">$0</dd></div>
+          </dl>
+          <button class="btn btn-solid" id="piCta" data-lead="lote">Quiero este lote</button>
+        </div>
+        <ul class="legend">
+          <li><i class="sw d"></i>Disponible<b class="js-disp">0</b></li>
+          <li><i class="sw a"></i>Apartado<b id="nA">0</b></li>
+          <li><i class="sw v"></i>Vendido<b id="nV">0</b></li>
+        </ul>
+        <label class="switch"><input type="checkbox" id="solo"><span>Solo disponibles</span></label>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN DE PAGOS (de ejemplo) -->
+<section class="sec" id="pagos">
+  <div class="wrap">
+    <h2 class="h2 rv">¿Cuánto pagarías al mes por tu lote?</h2>
+    <p class="lead rv">Elige la medida y mueve el enganche y el plazo.</p>
+    <div class="calc">
+      <form class="calc-in rv" id="calc" onsubmit="return false">
+        <fieldset>
+          <legend>Medida del lote</legend>
+          <div class="seg">
+            <label><input type="radio" name="cm" value="210"><span>210 m²</span></label>
+            <label><input type="radio" name="cm" value="230" checked><span>230 m²</span></label>
+            <label><input type="radio" name="cm" value="250"><span>250 m²</span></label>
+          </div>
+        </fieldset>
+        <div class="rango">
+          <label for="eng">Enganche <output id="engOut" for="eng">20%</output></label>
+          <input type="range" id="eng" min="10" max="50" step="5" value="20">
+          <small><span>10%</span><span>50%</span></small>
+        </div>
+        <div class="rango">
+          <label for="mes">Mensualidades <output id="mesOut" for="mes">24</output></label>
+          <input type="range" id="mes" min="6" max="36" step="6" value="24">
+          <small><span>6</span><span>36</span></small>
+        </div>
+      </form>
+      <div class="calc-out rv" aria-live="polite">
+        <p class="c-precio">Lote de <span id="cM2">230</span> m², precio de lista <b class="money" id="cPrecio">$0</b></p>
+        <div class="barra" aria-hidden="true"><i class="b1" id="bEng"></i><i class="b2" id="bMes"></i></div>
+        <dl class="c-dl">
+          <div><i style="background:var(--ink)"></i><dt>Enganche</dt><dd class="money" id="cEng">$0</dd></div>
+          <div class="mes"><i style="background:var(--acento)"></i><dt><span id="cN">24</span> mensualidades de</dt><dd class="money" id="cMes">$0</dd></div>
+        </dl>
+        <p class="ej">Precios y plazos de ejemplo. Te mandamos el plan real por WhatsApp.</p>
+        <button class="btn btn-solid" data-lead="plan">Recibir este plan</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACIÓN. PERSONALIZAR: foto de Atelier y tiempos reales -->
+<section class="sec" id="ubicacion">
+  <div class="wrap ubi">
+    <div>
+      <h2 class="h2 rv">Tranquilidad y conectividad en Orizaba.</h2>
+      <p class="lead rv">Un entorno residencial consolidado. La ubicación exacta te la compartimos en tu visita privada.</p>
+      <dl class="dist rv">
+        <div><dt>Centro de Orizaba</dt><dd>10 min</dd></div>
+        <div><dt>Autopista</dt><dd>8 min</dd></div>
+        <div><dt>Escuelas y supermercado</dt><dd>5 min</dd></div>
+        <div><dt>Hospital</dt><dd>12 min</dd></div>
+      </dl>
+      <p class="ej rv">Tiempos de ejemplo.</p>
+    </div>
+    <figure class="ubi-foto rv">
+      <div class="ph"><img src="img/real-01.jpg" alt="Terraza con vista a las montañas" loading="lazy"></div>
+      <figcaption>Vista desde una casa de Grupo M2.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- CONSTRUYE CON GRUPO M2 (fotos reales de una casa terminada) -->
+<section class="sec" id="construye">
+  <div class="wrap">
+    <img class="m2-logo rv" src="img/m2-logo-horizontal.png" alt="Grupo M2" width="485" height="120" loading="lazy">
+    <h2 class="h2 rv">Compra tu lote y construye con Grupo M2.</h2>
+    <p class="lead rv">Diseñamos y construimos tu casa llave en mano, a tu medida. Estas son fotos reales de una casa que terminamos.</p>
+    <div class="bento">
+      <figure class="b b-1 rv"><button data-a="1" aria-label="Ampliar la fachada"><img src="img/real-10.jpg" alt="Fachada con mármol oscuro y cochera techada" loading="lazy"></button>
+        <figcaption><b>Fachada</b>Mármol, piedra y madera.</figcaption></figure>
+      <figure class="b rv"><button data-a="8" aria-label="Ampliar la cocina"><img src="img/real-11.jpg" alt="Cocina con isla de mármol blanco en cascada" loading="lazy"></button>
+        <figcaption><b>Cocina</b>Isla de mármol en cascada.</figcaption></figure>
+      <figure class="b rv"><button data-a="10" aria-label="Ampliar la escalera"><img src="img/real-06.jpg" alt="Escalera flotante con barandal de vidrio" loading="lazy" style="object-position:50% 70%"></button>
+        <figcaption><b>Escalera</b>Flotante, con vidrio templado.</figcaption></figure>
+      <figure class="b rv"><button data-a="13" aria-label="Ampliar el baño"><img src="img/real-05.jpg" alt="Baño con cubierta de piedra y espejo iluminado" loading="lazy"></button>
+        <figcaption><b>Baños</b>Piedra y luz integrada.</figcaption></figure>
+      <figure class="b rv"><button data-a="11" aria-label="Ampliar el vestidor"><img src="img/real-02.jpg" alt="Vestidor de madera a la medida" loading="lazy"></button>
+        <figcaption><b>Vestidor</b>Madera a la medida.</figcaption></figure>
+    </div>
+    <div class="cons-cta">
+      <button class="link rv" data-a="0">Ver las 17 fotos<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <button class="link rv" data-video="img/promo-m2.mp4" data-poster="img/promo-m2.jpg">Ver recorrido<svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="cierre sec">
+  <div class="franjas" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap cierre-in">
+    <div>
+      <h2 class="h2 rv">Asegura tu lugar en Atelier.</h2>
+      <p class="lead rv">Envíanos un mensaje y agenda tu visita privada.</p>
+    </div>
+    <div class="cierre-cta rv">
+      <button class="btn btn-solid" data-lead="general">Recibir precios</button>
+      <a class="btn btn-line js-wa" href="#" data-wa="visita" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>Agendar visita</a>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section class="sec" id="preguntas">
+  <div class="wrap faq-grid">
+    <h2 class="h2 rv">Preguntas frecuentes</h2>
+    <div class="rv">
+      <details>
+        <summary>¿Dónde está Residencial Atelier?<span class="pm" aria-hidden="true"></span></summary>
+        <p>En Orizaba, en una zona residencial consolidada. La ubicación exacta te la compartimos al agendar tu visita privada.</p>
+      </details>
+      <details>
+        <summary>¿Qué medidas tienen los lotes?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Te mandamos por WhatsApp el plano con los lotes disponibles y sus medidas.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta un lote?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Depende de la medida y la ubicación del lote. Pídenos la lista de precios por WhatsApp.</p>
+      </details>
+      <details>
+        <summary>¿Puedo construir mi casa con Grupo M2?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Sí. Diseñamos y construimos tu casa llave en mano, a tu medida y ajustada a tu presupuesto.</p>
+      </details>
+      <details>
+        <summary>¿Cómo agendo una visita?<span class="pm" aria-hidden="true"></span></summary>
+        <p>Escríbenos por WhatsApp y agendamos tu visita privada al residencial.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="atelier" href="#top" aria-label="Residencial Atelier, inicio"><small>RESIDENCIAL</small><b>ATELIER</b></a>
+        <p class="por">Un desarrollo de <img src="img/m2-logo-horizontal.png" alt="Grupo M2" width="485" height="120" loading="lazy"></p>
+        <p class="eslogan">Calidad y diseño a tu medida.</p>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <ul>
+          <li><a class="js-wa" href="#" data-wa="general" target="_blank" rel="noopener">WhatsApp 272 705 1319</a></li>
+          <li><a class="js-wa" href="#" data-wa="visita" target="_blank" rel="noopener">Agendar visita</a></li>
+          <li><a href="mailto:GrupoM2@gmail.com">GrupoM2@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Residencial</h2>
+        <ul>
+          <li><a href="#atelier">Atelier</a></li>
+          <li><a href="#lotes">Lotes</a></li>
+          <li><a href="#pagos">Plan de pagos</a></li>
+          <li><a href="#construye">Construye con Grupo M2</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>Plano, medidas, precios y disponibilidad de ejemplo. Fotos de casas construidas por Grupo M2.</span>
+      <span><a href="#" id="aviso">Aviso de privacidad</a> · © 2026 Grupo M2</span>
+    </div>
+  </div>
+</footer>
+
+<div class="barra-cta" id="barraCta">
+  <button class="btn btn-solid" data-lead="general">Recibir precios</button>
+  <a class="btn btn-line wa js-wa" href="#" data-wa="general" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg></a>
+</div>
+
+<!-- Formulario de lead -->
+<dialog class="sheet" id="lead" aria-labelledby="shT">
+  <div class="sh-top">
+    <h2 id="shT">Recibe precios y el plano de lotes</h2>
+    <button class="sh-x" id="shX" aria-label="Cerrar"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="sh-body">
+    <p class="chip" id="chip" hidden></p>
+    <form id="leadForm" novalidate>
+      <div class="pasos-bar" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      <fieldset class="paso-f" data-paso="1">
+        <legend>¿Qué te interesa?</legend>
+        <div class="opts">
+          <label><input type="radio" name="interes" value="lote"><span>Un lote para construir</span></label>
+          <label><input type="radio" name="interes" value="lote-casa"><span>Lote y casa con Grupo M2</span></label>
+          <label><input type="radio" name="interes" value="inversion"><span>Invertir</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="paso-f" data-paso="2" hidden>
+        <legend>¿Cuándo te gustaría comprar?</legend>
+        <div class="opts">
+          <label><input type="radio" name="cuando" value="ya"><span>Lo antes posible</span></label>
+          <label><input type="radio" name="cuando" value="meses"><span>En unos meses</span></label>
+          <label><input type="radio" name="cuando" value="cotizo"><span>Solo estoy cotizando</span></label>
+        </div>
+        <div class="sh-nav"><button type="button" class="atras" data-atras>Atrás</button></div>
+      </fieldset>
+      <fieldset class="paso-f" data-paso="3" hidden>
+        <legend>¿A dónde te mandamos la información?</legend>
+        <div class="campo">
+          <label for="fNom">Nombre</label>
+          <input id="fNom" name="nombre" autocomplete="given-name" required aria-describedby="eNom">
+          <p class="err" id="eNom" aria-live="polite"></p>
+        </div>
+        <div class="campo">
+          <label for="fTel">WhatsApp, 10 dígitos</label>
+          <div class="tel"><span>+52</span><input id="fTel" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="272 123 4567" required aria-describedby="eTel"></div>
+          <p class="err" id="eTel" aria-live="polite"></p>
+        </div>
+        <label class="acepto"><input type="checkbox" id="fOk" name="acepto"><span>Acepto el <a href="#" target="_blank" rel="noopener">aviso de privacidad</a> y que me contacten por WhatsApp.</span></label>
+        <p class="err" id="eOk" aria-live="polite"></p>
+        <div class="sh-nav">
+          <button type="button" class="atras" data-atras>Atrás</button>
+          <button type="submit" class="btn btn-solid">Recibir información</button>
+        </div>
+      </fieldset>
+    </form>
+    <div class="gracias" id="gracias" hidden>
+      <h3 id="grT">Listo.</h3>
+      <p>Un asesor de Grupo M2 te escribe por WhatsApp. Si prefieres, ábrelo tú ahora y te contestamos ahí.</p>
+      <a class="btn btn-wa" id="grWa" href="#" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>Abrir WhatsApp</a>
+      <button class="btn btn-line" id="grOk">Seguir viendo</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Video -->
+<dialog class="vd" id="vd" aria-label="Video de Grupo M2">
+  <video controls playsinline preload="none"></video>
+  <button class="lb-x" id="vdX" aria-label="Cerrar video"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+</dialog>
+
+<!-- Galería -->
+<dialog class="lb" id="lb" aria-labelledby="lbT">
+  <div class="lb-top">
+    <p class="lb-t" id="lbT">Casa terminada por Grupo M2</p>
+    <button class="lb-x" id="lbX" aria-label="Cerrar galería"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <img id="lbImg" alt="">
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Foto anterior"><svg class="ic" aria-hidden="true"><use href="#i-prev"/></svg></button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Foto siguiente"><svg class="ic" aria-hidden="true"><use href="#i-next"/></svg></button>
+  </div>
+  <div class="lb-bar" id="lbBar" aria-hidden="true"></div>
+</dialog>
+
+<script>
+(() => {
+  /* ===== PERSONALIZAR: datos del residencial ===== */
+  const WHATSAPP = '522727051319';        // el de su tarjeta de contacto
+  const LEAD_WEBHOOK = '';                // URL del formulario o webhook de GHL; vacío = solo demo
+  const DESARROLLO = 'Residencial Atelier';
+  const PRECIO_M2 = 3900;                 // EJEMPLO: precio de lista por m²
+  // EJEMPLO: dos manzanas a los lados de la calle principal. Estado de cada lote: D disponible, A apartado, V vendido.
+  const LOTES = {
+    A: { x: 170, y: 72, w: 700, h: 180, st: 'VVAVDVDDAVDVDD', m2: [236, 212, 212, 212, 218, 218, 212, 212, 212, 222, 222, 212, 212, 248] },
+    B: { x: 170, y: 328, w: 700, h: 180, st: 'DVVDADVDDVADVD', m2: [244, 214, 214, 214, 220, 220, 214, 214, 214, 226, 226, 214, 214, 252] },
+  };
+
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mxn = n => '$' + Math.round(n).toLocaleString('es-MX');
+  const waLink = t => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+  const ESTADO = { D: 'Disponible', A: 'Apartado', V: 'Vendido' };
+
+  // Header sólido y barra fija cuando ya pasaste el hero
+  const hdr = $('#hdr'), barra = $('#barraCta');
+  new IntersectionObserver(([e]) => {
+    hdr.classList.toggle('solid', !e.isIntersecting);
+    barra.classList.toggle('show', !e.isIntersecting);
+  }, { rootMargin: '-72px 0px 0px 0px' }).observe($('#sentinel'));
+
+  // Entradas al hacer scroll
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+  $$('.rv').forEach(el => io.observe(el));
+
+  // Video de la tarjeta: se carga y corre en silencio solo cuando se ve
+  const vio = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { if (!v.src) v.src = v.dataset.src; if (!reduce) v.play().catch(() => {}); }
+    else v.pause();
+  }), { threshold: .3 });
+  $$('video[data-src]').forEach(v => vio.observe(v));
+
+  // Ligas de WhatsApp sin formulario
+  const WA_TXT = {
+    general: `Hola, me interesa ${DESARROLLO}. ¿Me mandan precios y el plano de lotes?`,
+    visita: `Hola, quiero agendar una visita privada a ${DESARROLLO}.`,
+  };
+  $$('.js-wa').forEach(a => { a.href = waLink(WA_TXT[a.dataset.wa] || WA_TXT.general); });
+
+  /* ===== Plano ===== */
+  const NS = 'http://www.w3.org/2000/svg', g = $('#lotesG'), plan = $('#plan');
+  const lotes = [];
+  Object.entries(LOTES).forEach(([mz, b]) => {
+    const n = b.st.length, cw = b.w / n;
+    for (let i = 0; i < n; i++) {
+      const st = b.st[i];
+      const lote = { id: `${mz}-${String(i + 1).padStart(2, '0')}`, mz, m2: b.m2[i], st };
+      const el = document.createElementNS(NS, 'rect');
+      el.setAttribute('x', (b.x + i * cw + 2).toFixed(1));
+      el.setAttribute('y', (b.y + 2).toFixed(1));
+      el.setAttribute('width', (cw - 4).toFixed(1));
+      el.setAttribute('height', (b.h - 4).toFixed(1));
+      el.setAttribute('class', 'lot ' + st.toLowerCase());
+      el.setAttribute('tabindex', '0');
+      el.setAttribute('role', 'button');
+      el.setAttribute('aria-label', `Lote ${lote.id}, ${lote.m2} metros cuadrados, ${ESTADO[st].toLowerCase()}`);
+      lote.el = el;
+      lotes.push(lote);
+      g.appendChild(el);
+    }
+  });
+  const cuenta = s => lotes.filter(l => l.st === s).length;
+  $$('.js-disp').forEach(e => { e.textContent = cuenta('D'); });
+  $$('.js-tot').forEach(e => { e.textContent = lotes.length; });
+  $('#nA').textContent = cuenta('A');
+  $('#nV').textContent = cuenta('V');
+
+  let elegido = null;
+  function muestra(l) {
+    $('#piDefault').hidden = !!l;
+    $('#piLote').hidden = !l;
+    if (!l) return;
+    $('#piId').textContent = `Lote ${l.id}`;
+    $('#piMz').textContent = l.mz;
+    $('#piM2').textContent = `${l.m2} m²`;
+    const st = $('#piSt');
+    st.textContent = ESTADO[l.st];
+    st.className = l.st === 'D' ? 'st-d' : '';
+    $('#piPr').textContent = l.st === 'V' ? 'Vendido' : mxn(l.m2 * PRECIO_M2);
+    $('#piCta').textContent = l.st === 'D' ? 'Quiero este lote' : l.st === 'A' ? 'Avísame si se libera' : 'Ver lotes disponibles';
+  }
+  function elige(l) {
+    if (elegido) elegido.el.classList.remove('sel');
+    elegido = l;
+    l.el.classList.add('sel');
+    muestra(l);
+  }
+  lotes.forEach(l => {
+    l.el.addEventListener('mouseenter', () => muestra(l));
+    l.el.addEventListener('mouseleave', () => muestra(elegido));
+    l.el.addEventListener('click', () => elige(l));
+    l.el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); elige(l); } });
+  });
+  $('#solo').addEventListener('change', e => plan.classList.toggle('solo', e.target.checked));
+
+  /* ===== Video con sonido ===== */
+  const vd = $('#vd'), vdv = $('video', vd);
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-video]');
+    if (!b) return;
+    vdv.poster = b.dataset.poster || '';
+    vdv.src = b.dataset.video;
+    vd.showModal(); document.body.style.overflow = 'hidden';
+    vdv.play().catch(() => {});
+  });
+  $('#vdX').addEventListener('click', () => vd.close());
+  vd.addEventListener('close', () => { vdv.pause(); document.body.style.overflow = ''; });
+  vd.addEventListener('click', e => { if (e.target === vd) vd.close(); });
+
+  /* ===== Galería: casa terminada por Grupo M2 ===== */
+  const FOTOS = [
+    ['real-13', 'Fachada con volúmenes blancos, muro de piedra y palmera'],
+    ['real-10', 'Fachada con mármol oscuro y cochera techada'],
+    ['real-09', 'Fachada con piedra, mármol oscuro y jardín'],
+    ['real-12', 'Casa terminada vista desde la calle'],
+    ['real-14', 'Fachada con balcón de vidrio'],
+    ['real-15', 'Casas con las montañas al fondo'],
+    ['real-08', 'Sala con plafón de luz indirecta y ventanales'],
+    ['real-16', 'Planta baja abierta con cocina y escalera'],
+    ['real-11', 'Cocina con isla de mármol blanco en cascada'],
+    ['real-17', 'Cocina con alacenas de madera y vitrina'],
+    ['real-06', 'Escalera flotante con barandal de vidrio y tragaluz'],
+    ['real-02', 'Vestidor de madera a la medida'],
+    ['real-03', 'Baño con doble lavabo y cancel de vidrio'],
+    ['real-05', 'Lavabo sobre cubierta de piedra con espejo iluminado'],
+    ['real-07', 'Baño con azulejo verde y luz integrada'],
+    ['real-04', 'Regadera con cancel de vidrio y ventana alta'],
+    ['real-01', 'Terraza con vista a las montañas'],
+  ];
+  const lb = $('#lb'), lbImg = $('#lbImg'), lbBar = $('#lbBar');
+  let idx = 0;
+  lbBar.innerHTML = FOTOS.map(() => '<i></i>').join('');
+  function show() {
+    lbImg.src = `img/${FOTOS[idx][0]}.jpg`; lbImg.alt = FOTOS[idx][1];
+    $$('i', lbBar).forEach((s, j) => s.classList.toggle('on', j === idx));
+    [idx + 1, idx - 1].forEach(j => { new Image().src = `img/${FOTOS[(j + FOTOS.length) % FOTOS.length][0]}.jpg`; });
+  }
+  function step(d) { idx = (idx + d + FOTOS.length) % FOTOS.length; show(); }
+  $$('#construye [data-a]').forEach(b => b.addEventListener('click', () => {
+    idx = +b.dataset.a; show(); lb.showModal(); document.body.style.overflow = 'hidden';
+  }));
+  lb.addEventListener('close', () => { document.body.style.overflow = ''; });
+  $('#lbX').addEventListener('click', () => lb.close());
+  $('#lbPrev').addEventListener('click', () => step(-1));
+  $('#lbNext').addEventListener('click', () => step(1));
+  lb.addEventListener('keydown', e => { if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); });
+  lb.addEventListener('click', e => { if (e.target === lb || e.target.id === 'lbStage') lb.close(); });
+  let x0 = null;
+  lbImg.addEventListener('pointerdown', e => { x0 = e.clientX; });
+  lbImg.addEventListener('pointerup', e => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); });
+
+  /* ===== Plan de pagos (de ejemplo) ===== */
+  const calc = $('#calc'), eng = $('#eng'), mes = $('#mes');
+  const plan_ = {};
+  function calcula() {
+    const m2 = +calc.elements.cm.value, precio = m2 * PRECIO_M2;
+    const e = +eng.value / 100, n = +mes.value, pEng = precio * e;
+    Object.assign(plan_, { m2, eng: +eng.value, n });
+    $('#engOut').textContent = `${eng.value}%`;
+    $('#mesOut').textContent = n;
+    $('#cM2').textContent = m2;
+    $('#cPrecio').textContent = mxn(precio);
+    $('#cEng').textContent = mxn(pEng);
+    $('#cN').textContent = n;
+    $('#cMes').textContent = mxn((precio - pEng) / n);
+    $('#bEng').style.flexGrow = e; $('#bMes').style.flexGrow = 1 - e;
+    [eng, mes].forEach(r => r.style.setProperty('--p', ((r.value - r.min) / (r.max - r.min) * 100) + '%'));
+  }
+  calc.addEventListener('input', calcula);
+  calcula();
+
+  /* ===== Formulario de lead ===== */
+  const sheet = $('#lead'), form = $('#leadForm'), chip = $('#chip');
+  const params = new URLSearchParams(location.search);
+  const UTM = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid']
+    .reduce((o, k) => (params.get(k) ? { ...o, [k]: params.get(k) } : o), {});
+  let contexto = '', paso = 1, porClic = false;
+
+  function irPaso(p) {
+    paso = p;
+    $$('.paso-f', form).forEach(f => { f.hidden = +f.dataset.paso !== p; });
+    $$('.pasos-bar i', form).forEach((b, j) => b.classList.toggle('on', j < p));
+    const primero = $(`.paso-f[data-paso="${p}"] input`, form);
+    if (primero && sheet.open) primero.focus({ preventScroll: true });
+  }
+  function abreLead(btn) {
+    const tipo = btn.dataset.lead;
+    if (tipo === 'lote' && elegido) {
+      if (elegido.st === 'V') { $('#solo').checked = true; plan.classList.add('solo'); return; }
+      contexto = `Lote ${elegido.id}, ${elegido.m2} m²${elegido.st === 'A' ? ', avísenme si se libera' : ''}`;
+    } else if (tipo === 'plan') contexto = `Lote de ${plan_.m2} m², ${plan_.eng}% de enganche y ${plan_.n} mensualidades`;
+    else contexto = '';
+    chip.textContent = contexto; chip.hidden = !contexto;
+    form.reset(); form.hidden = false; $('#gracias').hidden = true;
+    $$('.err', form).forEach(e => { e.textContent = ''; });
+    $$('[aria-invalid]', form).forEach(e => e.removeAttribute('aria-invalid'));
+    sheet.showModal(); document.body.style.overflow = 'hidden';
+    irPaso(1);
+  }
+  document.addEventListener('click', e => { const b = e.target.closest('[data-lead]'); if (b) { e.preventDefault(); abreLead(b); } });
+  sheet.addEventListener('close', () => { document.body.style.overflow = ''; });
+  $('#shX').addEventListener('click', () => sheet.close());
+  $('#grOk').addEventListener('click', () => sheet.close());
+  sheet.addEventListener('click', e => { if (e.target === sheet) sheet.close(); });
+  // Con clic avanza solo; con teclado se elige con flechas y se avanza con Enter
+  form.addEventListener('pointerdown', () => { porClic = true; });
+  form.addEventListener('change', e => {
+    const sigue = porClic; porClic = false;
+    if (!sigue) return;
+    if (e.target.name === 'interes') setTimeout(() => irPaso(2), 180);
+    if (e.target.name === 'cuando') setTimeout(() => irPaso(3), 180);
+  });
+  $$('[data-atras]', form).forEach(b => b.addEventListener('click', () => irPaso(+b.closest('.paso-f').dataset.paso - 1)));
+
+  const INTERES = { lote: 'un lote para construir', 'lote-casa': 'un lote y construir mi casa con Grupo M2', inversion: 'invertir' };
+  const CUANDO = { ya: 'quiero comprar lo antes posible', meses: 'pienso comprar en unos meses', cotizo: 'por ahora estoy cotizando' };
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = form.elements;
+    if (paso < 3) { if ((paso === 1 ? f.interes : f.cuando).value) irPaso(paso + 1); return; }
+    const nombre = f.nombre.value.trim(), tel = f.whatsapp.value.replace(/\D/g, '');
+    const errs = [
+      [!nombre, f.nombre, '#eNom', 'Escribe tu nombre.'],
+      [tel.length !== 10, f.whatsapp, '#eTel', 'Escribe tu WhatsApp a 10 dígitos.'],
+      [!f.acepto.checked, f.acepto, '#eOk', 'Acepta el aviso de privacidad para continuar.'],
+    ];
+    let ok = true;
+    errs.forEach(([mal, input, sel, txt]) => {
+      $(sel).textContent = mal ? txt : '';
+      input.toggleAttribute('aria-invalid', mal);
+      if (mal && ok) { input.focus(); ok = false; }
+    });
+    if (!ok) return;
+
+    const lead = { desarrollo: DESARROLLO, nombre, whatsapp: '+52' + tel, interes: f.interes.value, cuando: f.cuando.value,
+                   contexto, pagina: location.href.split('?')[0], ...UTM };
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'generate_lead', ...lead, nombre: undefined, whatsapp: undefined });
+    if (typeof window.fbq === 'function') window.fbq('track', 'Lead', { content_name: DESARROLLO });
+    if (LEAD_WEBHOOK) fetch(LEAD_WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead), keepalive: true }).catch(() => {});
+
+    const quiere = INTERES[f.interes.value] || 'información', cuando = CUANDO[f.cuando.value];
+    const msg = `Hola, soy ${nombre}. Me interesa ${DESARROLLO}${contexto ? ` (${contexto})` : ''}: busco ${quiere}${cuando ? ` y ${cuando}` : ''}. ¿Me mandan precios y el plano de lotes?`;
+    $('#grWa').href = waLink(msg);
+    $('#grT').textContent = `Listo, ${nombre}.`;
+    form.hidden = true; $('#gracias').hidden = false;
+    $('#grWa').focus();
+  });
+})();
+</script>
+</body>
+</html>
